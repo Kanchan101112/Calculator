@@ -1,0 +1,118 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and text styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator container styling - Box shaped with sharp edges */
+.Calculator {
+    background-color: lavenderblush;
+    border: 3px solid pink;  /* Solid blue border for the box */
+    padding: 20px;
+    width: 320px;  /* Set fixed width for a box shape */
+    height: 620px; /* Fixed height to make it look more like a box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* No rounded corners to keep it boxy */
+    border-radius: 10px; /* Straight edges for a box shape */
+}
+
+/* Input fields styling - Keeping them boxy */
+input[type="number"] {
+    width: 100%; /* Smaller width for a boxy look */
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 18px;
+    border: 2px solid purple;
+    /* Sharp corners to match the box look */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Button group styling - Boxy button layout */
+.buttons {
+    display: grid;  /* Use grid for a clean boxy layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for buttons */
+    gap: 10px;
+    margin: 15px 0;
+}
+
+button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    /* Sharp edges for the box effect */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: orange;
+        color: black;
+
+}
+
+button:active {
+    background-color: orange;
+        color: black;
+
+}
+
+/* Special styling for the Counter button */
+button[onclick="count()"] {
+    grid-column: span 2;  /* Make it take the full width of the container */
+    background-color: palevioletred;
+}
+
+button[onclick="count()"]:hover {
+    background-color: green;
+    color: black;
+}
+
+button[onclick="count()"]:active {
+    background-color: yellow;
+    color: black;
+
+}
+
+/* Result text styling */
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    color: purple;
+    font-weight: bold;
+    border: 3px solid pink;  /* Solid blue border for the box */
+    background-color: pink;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: purple;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+/* Title styling */
+#title {
+
+    font-size: 22px;
+    font-weight: 1000;
+    color: palevioletred;  /* Same blue as the calculator border */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid palevioletred;
+    padding-bottom: 10px;
+}
